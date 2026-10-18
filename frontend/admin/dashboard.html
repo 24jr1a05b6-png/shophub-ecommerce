@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | ShopHub</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <header id="site-navbar"></header>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+    <main class="admin-main">
+      <div class="admin-header">
+        <h1 class="page-title">Dashboard</h1>
+        <p class="text-muted">Overview of your store's performance.</p>
+      </div>
+
+      <div class="stat-grid" id="adminStats">
+        <div class="loader-wrap" style="grid-column:1/-1"><span class="loader"></span></div>
+      </div>
+
+      <div class="chart-grid mt-4">
+        <div class="chart-card">
+          <h3>💰 Monthly Revenue (last 6 months)</h3>
+          <div id="revenueChart"><div class="loader-wrap"><span class="loader"></span></div></div>
+        </div>
+        <div class="chart-card">
+          <h3>📂 Products by Category</h3>
+          <div id="categoryChart"><div class="loader-wrap"><span class="loader"></span></div></div>
+        </div>
+      </div>
+
+      <div class="card mt-4" style="padding:0;overflow:hidden">
+        <h3 style="padding:20px 22px 0">🧾 Recent Orders</h3>
+        <div id="recentOrders" style="padding:16px 22px 22px">
+          <div class="loader-wrap"><span class="loader"></span></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initAdminDashboard);</script>
+</body>
+</html>

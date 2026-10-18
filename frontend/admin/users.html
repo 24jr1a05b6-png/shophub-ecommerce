@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Users | ShopHub Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <header id="site-navbar"></header>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+    <main class="admin-main">
+      <div class="admin-header">
+        <h1 class="page-title">Manage Users</h1>
+        <p class="text-muted">View registered users and manage their roles.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Role</th>
+              <th>Joined</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <tr><td colspan="6" class="text-center"><span class="loader"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initAdminUsers);</script>
+</body>
+</html>

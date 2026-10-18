@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Products | ShopHub Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <header id="site-navbar"></header>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+    <main class="admin-main">
+      <div class="admin-header flex-between flex" style="flex-wrap:wrap;gap:12px">
+        <div>
+          <h1 class="page-title">Manage Products</h1>
+          <p class="text-muted">Add, edit, update stock, or delete products.</p>
+        </div>
+        <a href="add-product.html" class="btn btn-primary">➕ Add New Product</a>
+      </div>
+
+      <div class="form-group" style="max-width:360px">
+        <input type="text" id="adminProductSearch" class="form-control"
+               placeholder="🔍 Search products by name or category..." />
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Rating</th>
+              <th>Type</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productsTableBody">
+            <tr><td colspan="6" class="text-center"><span class="loader"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initAdminProducts);</script>
+</body>
+</html>

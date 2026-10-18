@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopHub — Shop Smarter. Live Better. A modern e-commerce store." />
+  <title>ShopHub | Shop Smarter. Live Better.</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Navbar is injected by common.js -->
+  <header id="site-navbar"></header>
+
+  <main style="flex:1">
+    <div class="container">
+      <!-- ============================ Hero ============================ -->
+      <section class="hero">
+        <div>
+          <span class="hero-badge">✨ New Season Collection 2026</span>
+          <h1>Shop Smarter.<br />Live Better.</h1>
+          <p>
+            Discover thousands of quality products across electronics, fashion, home and beauty —
+            all at prices you'll love, delivered right to your door.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-lg btn-light">🛍️ Shop Now</a>
+            <a href="#featured" class="btn btn-lg btn-dark">Explore Products</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><strong id="statProducts">18+</strong><span>Products</span></div>
+            <div class="hero-stat"><strong>6</strong><span>Categories</span></div>
+            <div class="hero-stat"><strong>4.7★</strong><span>Avg. Rating</span></div>
+          </div>
+        </div>
+        <img class="hero-image"
+             src="https://picsum.photos/seed/shophubhero/800/600"
+             alt="Shopping"
+             onerror="this.src='https://via.placeholder.com/800x600/4f46e5/ffffff?text=ShopHub'" />
+      </section>
+
+      <!-- ========================= Categories ========================= -->
+      <section class="section" id="categories">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Find exactly what you're looking for.</p>
+        <div class="category-grid" id="categoryList"></div>
+      </section>
+
+      <!-- ====================== Featured Products ===================== -->
+      <section class="section" id="featured">
+        <div class="flex-between flex" style="flex-wrap:wrap;gap:12px">
+          <div>
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Handpicked popular items our customers love.</p>
+          </div>
+          <a href="products.html" class="btn btn-outline">View All Products →</a>
+        </div>
+        <div class="product-grid" id="featuredProducts">
+          <div class="loader-wrap" style="grid-column:1/-1"><span class="loader"></span></div>
+        </div>
+      </section>
+
+      <!-- ========================== Features ========================== -->
+      <section class="section">
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-icon indigo">🚚</div><div><div class="stat-value" style="font-size:1.1rem">Free Shipping</div><div class="stat-label">On orders over $100</div></div></div>
+          <div class="stat-card"><div class="stat-icon green">🔒</div><div><div class="stat-value" style="font-size:1.1rem">Secure Payment</div><div class="stat-label">100% protected checkout</div></div></div>
+          <div class="stat-card"><div class="stat-icon amber">↩️</div><div><div class="stat-value" style="font-size:1.1rem">Easy Returns</div><div class="stat-label">30-day return policy</div></div></div>
+          <div class="stat-card"><div class="stat-icon violet">🎧</div><div><div class="stat-value" style="font-size:1.1rem">24/7 Support</div><div class="stat-label">We're here to help</div></div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer is injected by common.js -->
+  <footer id="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

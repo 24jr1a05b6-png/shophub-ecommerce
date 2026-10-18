@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Orders | ShopHub Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <header id="site-navbar"></header>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar"></aside>
+
+    <main class="admin-main">
+      <div class="admin-header">
+        <h1 class="page-title">Manage Orders</h1>
+        <p class="text-muted">Track and update customer order statuses.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="form-group" style="flex:2">
+          <label class="form-label" for="orderSearch">Search</label>
+          <input type="text" id="orderSearch" class="form-control"
+                 placeholder="Search by order ID, customer name or email..." />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="orderStatusFilter">Filter by Status</label>
+          <select id="orderStatusFilter" class="form-control">
+            <option value="">All Statuses</option>
+            <option>Pending</option>
+            <option>Confirmed</option>
+            <option>Processing</option>
+            <option>Shipped</option>
+            <option>Out for Delivery</option>
+            <option>Delivered</option>
+            <option>Cancelled</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Payment</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTableBody">
+            <tr><td colspan="7" class="text-center"><span class="loader"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initAdminOrders);</script>
+</body>
+</html>

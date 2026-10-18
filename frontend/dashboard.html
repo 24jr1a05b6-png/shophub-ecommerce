@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard | ShopHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header id="site-navbar"></header>
+
+  <main style="flex:1" id="userDashboard">
+    <div class="container" style="padding-top:32px">
+      <h1 class="page-title">Hello, <span id="dashName">Shopper</span> 👋</h1>
+      <p class="text-muted mb-3">Here's a quick overview of your account.</p>
+
+      <div class="stat-grid" id="dashStats"></div>
+
+      <div class="flex gap-2 mt-4" style="flex-wrap:wrap">
+        <a href="products.html" class="btn btn-primary">🛍️ Continue Shopping</a>
+        <a href="orders.html" class="btn btn-light">📦 All Orders</a>
+        <a href="profile.html" class="btn btn-light">👤 Manage Profile</a>
+        <a href="cart.html" class="btn btn-light">🛒 View Cart</a>
+      </div>
+
+      <div class="card mt-4">
+        <h3 class="mb-2">Recent Orders</h3>
+        <div id="dashRecentOrders">
+          <div class="loader-wrap"><span class="loader"></span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>
